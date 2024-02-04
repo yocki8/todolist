@@ -1,0 +1,13 @@
+@font-face {
+    font-family: myfont;
+    src: url(./assets/fonts/Arqui.otf);
+}
+
+@font-face {
+    font-family: todo;
+    src: url(./assets/fonts/Novanta-Regular.otf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

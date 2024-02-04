@@ -1,0 +1,17 @@
+#overl {
+        /* background: linear-gradient(-45deg,#6F0058 20%,red 40%); */
+        /* background-size: 100% 00%; */
+        animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
