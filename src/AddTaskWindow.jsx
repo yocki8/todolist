@@ -13,7 +13,7 @@ export default function AddTaskWindow({ hideTaksWindow, handleActive, addTask })
     };
 
     const userEntered = (e) => {
-        if (e.key == 'Enter') {
+        if (e.key === 'Enter') {
             handleActive(1);
             addTask(taskName, description, 1);
         }

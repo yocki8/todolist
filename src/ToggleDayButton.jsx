@@ -1,7 +1,6 @@
-import 'animate.css'
+import 'animate.css';
 
 export default function ToggleDayButton({ day, index, active, handleActive }) {
-    
     return (
         <li>
             <button
@@ -10,7 +9,7 @@ export default function ToggleDayButton({ day, index, active, handleActive }) {
                 <span
                     className={
                         'animate__animated absolute  h-4/5 w-[90%] rounded-full bg-white/60  blur-[4px] backdrop-blur-2xl ' +
-                        (active == index ? 'animate__bounceIn' : 'animate__bounceOut')
+                        (active === index ? 'animate__bounceIn' : 'animate__bounceOut')
                     }></span>
                 <h1 className="font-[todo]  text-2xl drop-shadow-[-4px_4px_2px_rgba(0,0,0,0.25)]">{day}</h1>
             </button>

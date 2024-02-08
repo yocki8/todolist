@@ -1,5 +1,5 @@
 import 'animate.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import AddTaskButton from './AddTaskButton';
 import AddTaskWindow from './AddTaskWindow';
 import TaskArea from './TaskArea';
@@ -27,7 +27,6 @@ export default function CreateTaskSection() {
                     let dateAdded = new Date(tasks[0].dateAdded);
                     dateAdded.setHours(0, 0, 0, 0);
                     const daysPassed = (currentDate - dateAdded) / (1000 * 60 * 60 * 24);
-                    console.log(daysPassed);
                     if (daysPassed === 1) {
                         const temp = [...tasksFetched[index]];
                         tasksFetched[index] = [];
@@ -70,7 +69,7 @@ export default function CreateTaskSection() {
     };
 
     const hideTaksWindow = (e, added) => {
-        if (added || e.target.getAttribute('id') == 'overlay') setShowAddWindow(false);
+        if (added || e.target.getAttribute('id') === 'overlay') setShowAddWindow(false);
     };
 
     const markTaskCompleted = (index) => {
@@ -90,7 +89,7 @@ export default function CreateTaskSection() {
         const taskArr = tasksCpy[index];
 
         const dateAdded = new Date();
-        if (index == 2) dateAdded.setDate(dateAdded.getDate() + 1);
+        if (index === 2) dateAdded.setDate(dateAdded.getDate() + 1);
         if (taskName.length || description.length) taskArr.push({ taskName, description, indexToMap: taskArr.length, isCompleted: false, dateAdded });
 
         setTasks(tasksCpy);
