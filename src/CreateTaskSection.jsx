@@ -99,7 +99,7 @@ export default function CreateTaskSection() {
         <>
             <div
                 id="task-section"
-                className="animate__animated animate__bounceIn m-auto flex h-full w-full flex-col items-center gap-2 rounded-t-[70px] border-[1px] border-red-400 bg-red-200 p-6 drop-shadow-[-10px_20px_10px_rgba(0,0,0,0.25)] transition-all duration-500 md:min-h-[485px] md:w-2/3 md:max-w-[700px] md:rounded-[50px]">
+                className="animate__animated animate__bounceIn m-auto flex h-full w-full flex-col items-center gap-2 rounded-t-[25px] border-[1px] border-red-400 bg-red-200 p-6 drop-shadow-[-10px_20px_10px_rgba(0,0,0,0.25)] transition-all duration-500 md:min-h-[485px] md:w-2/3 md:max-w-[700px] md:rounded-[50px]">
                 
                 <AddTaskButton handleTasks={openTaskWindow} />
                 <ToggleDaysMenu active={active} handleActive={handleActive} />
